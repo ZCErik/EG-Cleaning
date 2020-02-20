@@ -7,12 +7,20 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { PhotoListResolver } from './photos/photo-list/photo-list.resolver';
 import { AuthGuard } from './core/auth/auth.guard';
 import { PhotoDetailsComponent } from './photos/photo-details/photo-details.component';
+import { RegisterEmployee } from './employees/register-employee/register-employee';
 
 const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
         redirectTo: 'home'
+    },
+    {
+        path: 'register-employee',
+        component: RegisterEmployee,
+        data: {
+            title: "E.G. - Register Form"
+        }
     },
     {
         path: 'home',

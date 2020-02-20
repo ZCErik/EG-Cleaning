@@ -1,0 +1,154 @@
+<div class="jumbotron registerBg employye">
+    <h1 class="text-center mt-auto mb-auto">Register New Employee</h1>
+</div>
+
+<form [formGroup]="registerEmployee" (submit)="signup()" class="form">
+    <div class="form-row">
+        <div class="col-md-3 mb-3 ml-auto form-group">
+            <mat-label>First name</mat-label>
+            <input formControlName="firstName" type="text" class="form-control" placeholder="First name" autofocus required>
+            <app-vmessage 
+                *ngIf="registerEmployee.get('firstName').errors?.required" 
+                text="A name is required!">
+            </app-vmessage>    
+        </div>
+        <div class="col-md-2 mb-3">
+            <mat-label>Middle name</mat-label>
+            <input formControlName="middleName" type="text" class="form-control" placeholder="Middle name">
+        </div>
+        <div class="col-md-3 mb-3 mr-auto">
+            <mat-label>Last name</mat-label>
+            <input formControlName="lastName" type="text" class="form-control" id="validationCustom03" placeholder="Last name" required>
+            <app-vmessage 
+                *ngIf="registerEmployee.get('lastName').errors?.required" 
+                text="Last name is required!">
+            </app-vmessage>  
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-4 mb-3 ml-auto">
+            <mat-label>Street Address</mat-label>
+            <input formControlName="street" type="text" class="form-conrtol" id="streeId" placeholder="Street Address" required>
+        </div>
+        <div class="col-md-4 mb-3 mr-auto">
+            <mat-label>Apartament/Unit #</mat-label>
+            <input formControlName="aptoUnit" type="text" class="form-conrtol" id="unitNo" placeholder="Apartament/Unit #" required>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-4 ml-auto">
+            <mat-label>City</mat-label>
+            <input formControlName="city" type="text" class="form-control" id="validationCustom04" placeholder="City" required>
+            <div class="invalid-feedback">Please provide a valid city.</div>
+        </div>
+        <div class="col-md-2">
+            <mat-label>Province</mat-label>
+            <input formControlName="province" type="text" class="form-control" id="validationCustom05" placeholder="Province" required>
+            <div class="invalid-feedback">Please provide a valid pronvice.</div>
+        </div>
+        <div class="col-md-2 mb-3 mr-auto">
+            <mat-label>Postal Code</mat-label>
+            <input formControlName="postalCode" type="text" class="form-control" id="validationCustom05" placeholder="Postal Code" required>
+            <div class="invalid-feedback">Please provide a valid postal code.</div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-4 mb-3 ml-auto">
+            <mat-label>Home Phone</mat-label>
+            <input formControlName="homePhone" type="text" class="form-control" id="homePhone" placeholder="Home Phone" required>
+        </div>
+        <div class="col-md-4 mb-3 mr-auto">
+            <mat-label>Alternate Phone</mat-label>
+            <input formControlName="secondaryPhone" type="text" class="form-control" id="alternatePhone" placeholder="Alternate Phone">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-4 mb-3 ml-auto">
+            <mat-label>Email Address</mat-label>
+            <input formControlName="email" type="email" class="form-control" id="emailId" aria-describedby="emailHelp" placeholder="Enter email"
+                required>
+        </div>
+        <div class="col-md-4 mb-3 mr-auto">
+            <mat-label>SIN Number</mat-label>
+            <input formControlName="sinNumber" type="text" class="form-control" id="sinNumber" placeholder="SIN Number" required>
+        </div>
+    </div>
+    <div class="form-row">
+    </div>
+    <div class="form-row">
+        <div class="col-md-5 mb-3 ml-auto">
+            <mat-label>Birth Date</mat-label>
+            <input formControlName="birthDate"type="text" class="form-control" id="birthId" placeholder="Birth day" required>
+        </div>
+        <div class="col-md-3 mb-3 mr-auto">
+            <mat-label>Marital Status</mat-label>
+            <input formControlName="maritalStatus" type="text" class="form-control" id="maritalStatus" placeholder="Marital Status">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-4 mb-3 ml-auto">
+            <mat-label>Spouse’s Name</mat-label>
+            <input formControlName="spounseName" type="text" class="form-control" id="spounseName" placeholder="Spouse’s Name">
+        </div>
+        <div class="col-md-4 mb-3 mr-auto">
+            <mat-label for="birthDate">Spouse’s Phone</mat-label>
+            <input formControlName="spousePhone" type="text" class="form-control" id="spounsePhone" placeholder="Spouse’s Phone">
+        </div>
+    </div>
+    <div class="jumbotron registerBg">
+        <div class="col-md-12 ml-auto mb-3 mr-auto text-center">
+            <h2 class="mt-auto mb-auto">Emergency Contact Information</h2>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-5 mb-3 ml-auto">
+            <mat-label>Emergency Contact</mat-label>
+            <input formControlName="emergencyContact" type="text" class="form-control" placeholder="Contact Name" required>
+        </div>
+        <div class="col-md-3 mb-3 mr-auto">
+            <mat-label>Emergency Phone</mat-label>
+            <input formControlName="ePhone" type="text" class="form-control" id="homePhone" placeholder="Home Phone" required>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-4 mb-3 ml-auto">
+            <mat-label>Street Address</mat-label>
+            <input formControlName="eAddress" type="text" class="form-conrtol" id="streeId" placeholder="Street Address" required>
+        </div>
+        <div class="col-md-4 mb-3 mr-auto">
+            <mat-label>Apartament/Unit #</mat-label>
+            <input formControlName="eUnit" type="text" class="form-conrtol" id="streeId" placeholder="Apartament/Unit #" required>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-4 ml-auto">
+            <mat-label>City</mat-label>
+            <input formControlName="eCity" type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+            <div class="invalid-feedback">Please provide a valid city.</div>
+        </div>
+        <div class="col-md-2">
+            <mat-label>Province</mat-label>
+            <input formControlName="eProvince" type="text" class="form-control" id="validationCustom04" placeholder="Province" required>
+            <div class="invalid-feedback">Please provide a valid pronvice.</div>
+        </div>
+        <div class="col-md-2 mb-3 mr-auto">
+            <mat-label>Postal Code</mat-label>
+            <input formControlName="ePostalCode" type="text" class="form-control" id="validationCustom05" placeholder="Postal Code" required>
+            <div class="invalid-feedback">Please provide a valid postal code.</div>
+        </div>
+    </div>
+
+    <div class="form-group text-center">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <mat-label> class="form-check-label" for="invalidCheck">
+                Agree to terms and conditions
+            </mat-label>
+            <div class="invalid-feedback">
+                You must agree before submitting.
+            </div>
+        </div>
+        <!-- [disabled]="registerEmployee || registerEmployee.pending" -->
+        <button class="btn btn-primary">Submit form</button>
+    </div>
+</form>
