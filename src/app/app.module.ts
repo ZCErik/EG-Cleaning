@@ -1,11 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import {
-  MatInputModule, MatFormFieldModule, MatProgressSpinnerModule, MatIconModule, MatTooltipModule, MatButtonModule, MatRadioModule,
-  MatSelectModule, MatOptionModule, MatDatepickerModule, MatNativeDateModule, MatListModule, MatCardModule, MatDialogModule, MatPaginatorModule, MatTableModule, MatCheckboxModule
-} from '@angular/material';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { PhotosModule } from './photos/photos.module';
 import { AppRoutingModule } from './app.routing.module';
 import { ErrorsModule } from './errors/errors.module';
@@ -24,23 +21,8 @@ import { EmployeesModule } from './employees/employees.module';
     EmployeesModule,
     CoreModule,
     AppRoutingModule,
-    MatInputModule,
-    MatRadioModule,
-    MatSelectModule,
-    MatOptionModule,
-    MatDatepickerModule,
     MatFormFieldModule,
-    MatNativeDateModule,
-    MatProgressSpinnerModule,
-    MatListModule,
-    MatCardModule,
-    MatIconModule,
-    MatTooltipModule,
-    MatButtonModule,
-    MatPaginatorModule,
-    MatDialogModule,
-    MatTableModule,
-    MatCheckboxModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
