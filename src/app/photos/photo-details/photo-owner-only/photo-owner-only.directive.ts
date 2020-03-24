@@ -1,4 +1,4 @@
-import { Directive, Input, ElementRef, Renderer } from '@angular/core';
+import { Directive, Input, ElementRef, Renderer2 } from '@angular/core';
 import { Photo } from '../../photo/photo';
 import { UserService } from 'src/app/core/user/user.service';
 
@@ -11,7 +11,7 @@ export class PhotoOwnerOnlyDirective {
 
   constructor(
     private element: ElementRef<any>,
-    private renderer: Renderer,
+    private renderer: Renderer2,
     private userService: UserService
     
   ) { }
@@ -20,9 +20,7 @@ export class PhotoOwnerOnlyDirective {
     this.userService.getUser()
       .subscribe(user => {
         if(!user || user.id != this.ownedPhoto.userId) {
-          this.renderer.setElementStyle(
-            this.element.nativeElement, 'display', 'none'
-          )
+          this.renderer.setStyle(this.element.nativeElement, 'display', 'none')
         }
       })
   }
