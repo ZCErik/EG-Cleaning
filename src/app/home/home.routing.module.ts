@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
-import { SigninComponent } from './signin/signin.component';
+import { SignInComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginGuard } from '../core/auth/login.guard';
 
@@ -14,7 +14,7 @@ const routes: Routes = [
         children: [
             {
                 path: '',
-                component:  SigninComponent,
+                component:  SignInComponent,
                 data: {
                     title: "Sign in"
                 }

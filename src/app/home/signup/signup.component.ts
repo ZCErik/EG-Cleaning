@@ -15,9 +15,9 @@ import { PlatformDetectorService } from 'src/app/core/platform-detector/platform
   providers: [ UserNotTakenValidatorService ]
 })
 export class SignupComponent implements OnInit {
-  signupForm: FormGroup
-
-  @ViewChild('emailInput') emailInput: ElementRef<HTMLInputElement>
+  
+  signupForm: FormGroup;
+  @ViewChild('emailInput') emailInput: ElementRef<HTMLInputElement>;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -28,8 +28,7 @@ export class SignupComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.platformDetectorService.isPlatformBrowser() && 
-      this.emailInput.nativeElement.focus();
+    console.log("emailInput", this.emailInput)
 
     this.signupForm = this.formBuilder.group({
       email: ['',
@@ -64,16 +63,19 @@ export class SignupComponent implements OnInit {
         ]
       ]
     })
+    this.platformDetectorService.isPlatformBrowser() && 
+      this.emailInput.nativeElement.focus();   
   }
 
   signup(){
-    console.log("enviando...");
-    const newUser = this.signupForm.getRawValue() as NewUser;
-    this.signUpService.signup(newUser)
+    if(!this.signupForm.valid && !this.signupForm.pending) {
+      console.log("enviando...");
+      const newUser = this.signupForm.getRawValue() as NewUser;
+      this.signUpService.signup(newUser)
       .subscribe(() => {
         this.router.navigate(['']),
         err => console.log(err);
       })
-
+    } 
   }
 }

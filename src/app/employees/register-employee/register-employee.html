@@ -9,8 +9,12 @@
             <input formControlName="firstName" type="text" class="form-control" placeholder="First name" autofocus required>
             <app-vmessage 
                 *ngIf="registerEmployee.get('firstName').errors?.required" 
-                text="A name is required!">
-            </app-vmessage>    
+                text="Name is required!">
+            </app-vmessage>
+            <app-vmessage 
+                *ngIf="registerEmployee.get('firstName').errors?.minlenght" 
+                text="Minimum of 3 charaters!">
+            </app-vmessage>      
         </div>
         <div class="col-md-2 mb-3">
             <mat-label>Middle name</mat-label>
@@ -22,6 +26,10 @@
             <app-vmessage 
                 *ngIf="registerEmployee.get('lastName').errors?.required" 
                 text="Last name is required!">
+            </app-vmessage>
+            <app-vmessage 
+                *ngIf="registerEmployee.get('lastName').errors?.minlenght" 
+                text="Minimum of 3 charaters!">
             </app-vmessage>  
         </div>
     </div>
