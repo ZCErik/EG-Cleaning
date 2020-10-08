@@ -11,12 +11,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   export class RegisterEmployee implements OnInit {
     
     registerEmployee: FormGroup
+    submitted = false;
 
     constructor(
       private formbuilder: FormBuilder
     ){}
 
     ngOnInit(): void {
+      
       this.registerEmployee = this.formbuilder.group({
         firstName: ['', 
           [
@@ -63,7 +65,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
       })
     }
 
-    signup(){
+    submit() {
+      this.submitted = true;
       console.log("envinado...");
       console.log(this.registerEmployee);
       debugger

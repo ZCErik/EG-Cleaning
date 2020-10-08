@@ -30,7 +30,6 @@ export class SignInComponent implements OnInit {
             
     } 
     ngAfterViewInit() {
-      console.log("afterinit");
       setTimeout(() => {
         this.platformDetectorService.isPlatformBrowser() && 
           this.userNameInput.nativeElement.focus();  
@@ -46,10 +45,10 @@ export class SignInComponent implements OnInit {
               () => this.router.navigate(['user', userName]),
               err => {
                   console.log(err);
-                  this.loginForm.reset();
-                  this.platformDetectorService.isPlatformBrowser() && 
-                      this.userNameInput.nativeElement.focus();
-                  alert('Invalid user name or password');
+                  // this.loginForm.reset();
+                  // this.platformDetectorService.isPlatformBrowser() && 
+                  //     this.userNameInput.nativeElement.focus();
+                  // alert('Invalid user name or password');
               }
           );
     }
