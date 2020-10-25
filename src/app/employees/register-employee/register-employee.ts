@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+//Provinces
+interface Province {
+  value: number;
+  viewValue: string;
+}
 
 @Component({
     selector: 'app-register-employee',
@@ -10,12 +15,16 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
   export class RegisterEmployee implements OnInit {
     
+    provinces: Province[] = [
+      { value: 0, viewValue: 'Ontario'},
+      { value: 1, viewValue: 'British Columbia'},
+      { value: 2, viewValue: 'Quebec'}
+    ];
+
     registerEmployee: FormGroup
     submitted = false;
 
-    constructor(
-      private formbuilder: FormBuilder
-    ){}
+    constructor( private formbuilder: FormBuilder){}
 
     ngOnInit(): void {
       
@@ -41,10 +50,25 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
             Validators.maxLength(25)
           ]
         ],
-        street: [''],
         aptoUnit: [''],
-        city: [''],
-        province: [''],
+        street: ['',
+          [
+            Validators.required,
+            Validators.minLength(3)
+          ]
+        ],
+        city: ['',
+          [
+            Validators.required,
+            Validators.minLength(3)
+          ]
+        ],
+        province: ['',
+          [
+            Validators.required,
+            Validators.minLength(6)
+          ]
+        ],
         postalCode: [''],
         homePhone: [''],
         secondaryPhone: [''],
@@ -69,6 +93,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
       this.submitted = true;
       console.log("envinado...");
       console.log(this.registerEmployee);
-      debugger
+      // debugger;
     }
   }

@@ -36,28 +36,55 @@
     <div class="form-row">
         <div class="col-md-4 mb-3 ml-auto">
             <mat-label>Street Address</mat-label>
-            <input formControlName="street" type="text" class="form-conrtol" id="streeId" placeholder="Street Address" required>
+            <input formControlName="street" type="text" class="form-control" id="streeId" placeholder="Street Address" required>
+            <app-vmessage 
+                *ngIf="submitted && registerEmployee.get('street').errors?.required" 
+                text="Street is required!">
+            </app-vmessage>
+            <app-vmessage 
+                *ngIf="submitted && registerEmployee.get('street').errors?.minlength" 
+                text="Minimum of 3 charaters!">
+            </app-vmessage>    
         </div>
         <div class="col-md-4 mb-3 mr-auto">
-            <mat-label>Apartament/Unit #</mat-label>
-            <input formControlName="aptoUnit" type="text" class="form-conrtol" id="unitNo" placeholder="Apartament/Unit #" required>
+            <mat-label>Apartament/Unit#</mat-label>
+            <input formControlName="aptoUnit" type="text" class="form-control" id="unitNo" placeholder="Apartament/Unit#">
         </div>
     </div>
     <div class="form-row">
         <div class="col-md-4 ml-auto">
             <mat-label>City</mat-label>
             <input formControlName="city" type="text" class="form-control" id="validationCustom04" placeholder="City" required>
-            <div class="invalid-feedback">Please provide a valid city.</div>
+            <app-vmessage 
+                *ngIf="submitted && registerEmployee.get('city').errors?.required" 
+                text="City is required!">
+            </app-vmessage>
+            <app-vmessage 
+                *ngIf="submitted && registerEmployee.get('city').errors?.minlength" 
+                text="Minimum of 3 charaters!">
+            </app-vmessage> 
         </div>
         <div class="col-md-2">
-            <mat-label>Province</mat-label>
-            <input formControlName="province" type="text" class="form-control" id="validationCustom05" placeholder="Province" required>
-            <div class="invalid-feedback">Please provide a valid pronvice.</div>
+            <mat-form-field appearance="fill">
+                <mat-label>Province</mat-label>
+                <mat-select>
+                  <mat-option *ngFor="let province of provinces" [value]="province.value">
+                    {{province.viewValue}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field> 
         </div>
         <div class="col-md-2 mb-3 mr-auto">
             <mat-label>Postal Code</mat-label>
-            <input formControlName="postalCode" type="text" class="form-control" id="validationCustom05" placeholder="Postal Code" required>
-            <div class="invalid-feedback">Please provide a valid postal code.</div>
+            <input formControlName="postalCode" type="text" class="form-control" id="postalCode" placeholder="Postal Code" required>
+            <app-vmessage 
+                *ngIf="submitted && registerEmployee.get('postalCode').errors?.required" 
+                text="Postal code is required!">
+            </app-vmessage>
+            <app-vmessage 
+                *ngIf="submitted && registerEmployee.get('postalCode').errors?.minlength" 
+                text="Minimum of 6 charaters!">
+            </app-vmessage> 
         </div>
     </div>
     <div class="form-row">
@@ -121,11 +148,11 @@
     <div class="form-row">
         <div class="col-md-4 mb-3 ml-auto">
             <mat-label>Street Address</mat-label>
-            <input formControlName="eAddress" type="text" class="form-conrtol" id="streeId" placeholder="Street Address" required>
+            <input formControlName="eAddress" type="text" class="form-control" id="eStreeId" placeholder="Street Address" required>
         </div>
         <div class="col-md-4 mb-3 mr-auto">
-            <mat-label>Apartament/Unit #</mat-label>
-            <input formControlName="eUnit" type="text" class="form-conrtol" id="streeId" placeholder="Apartament/Unit #" required>
+            <mat-label>Apartament/Unit#</mat-label>
+            <input formControlName="eUnit" type="text" class="form-control" id="eUnitNo" placeholder="Apartament/Unit#">
         </div>
     </div>
     <div class="form-row">
