@@ -1,0 +1,36 @@
+{
+  "name": "eg-cleaning",
+  "version": "1.0.0",
+  "description": "<<<<<<< HEAD\r # Alurapic",
+  "main": "karma.conf.js",
+  "dependencies": {
+    "@angular/animations": "^10.0.0 || ^11.0.0-0",
+    "@angular/cdk": "^10.2.5",
+    "@angular/cli": "^10.2.0",
+    "@angular/common": "^10.2.0",
+    "@angular/forms": "^10.0.0 || ^11.0.0-0",
+    "@angular/material": "^10.2.5",
+    "@angular/router": "^10.2.0",
+    "bootstrap": "^4.5.3",
+    "font-awesome": "^4.7.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^0.1002.0",
+    "@angular/compiler": "^10.2.0",
+    "@angular/compiler-cli": "^10.2.0",
+    "@angular/core": "^10.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZCErik/EG-Cleaning.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZCErik/EG-Cleaning/issues"
+  },
+  "homepage": "https://github.com/ZCErik/EG-Cleaning#readme"
+}
