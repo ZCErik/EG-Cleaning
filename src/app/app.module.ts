@@ -6,7 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import { PhotosModule } from './photos/photos.module';
 import { AppRoutingModule } from './app.routing.module';
 import { ErrorsModule } from './errors/errors.module';
-import { MatSelectModule } from '@angular/material';
+import { MatSelectModule } from '@angular/material/select';
 import { CoreModule } from './core/core.module';
 import { EmployeesModule } from './employees/employees.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
