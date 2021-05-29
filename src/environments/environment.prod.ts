@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  ApiUrl: 'http://yourapigoeshere'
+  ApiUrl: './stack/projects/EG-Cleaning/api/server.js'
 };
