@@ -6,7 +6,7 @@
   "dependencies": {
     "@angular/animations": "^10.0.0 || ^11.0.0-0",
     "@angular/cdk": "^10.2.5",
-    "@angular/cli": "^10.2.0",
+    "@angular/cli": "^12.0.2",
     "@angular/common": "^10.2.0",
     "@angular/forms": "^10.0.0 || ^11.0.0-0",
     "@angular/http": "^7.2.16",
@@ -14,24 +14,30 @@
     "@angular/platform-browser": "^10.2.0",
     "@angular/platform-browser-dynamic": "^10.2.0",
     "@angular/router": "^10.2.0",
+    "@types/jest": "^26.0.23",
     "@types/jwt-decode": "^2.2.1",
     "bootstrap": "^4.5.3",
     "core-js": "^2.5.0",
     "font-awesome": "^4.7.0",
     "hammerjs": "^2.0.8",
     "jwt-decode": "^3.1.2",
+    "protractor": "^7.0.0",
     "sqlite3": "^5.0.2",
     "zone.js": "^0.11.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.1002.0",
+    "@angular-devkit/build-angular": "^12.0.2",
     "@angular/compiler": "^10.2.0",
     "@angular/compiler-cli": "^10.2.0",
     "@angular/core": "^10.2.0",
-    "typescript": "^4.0.3"
+    "typescript": "^4.0.3",
+    "webpack-cli": "^4.7.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "ts-node-dev --respawn src/Union.ts",
+    "serve": "ts-node-dev src/function.ts",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
