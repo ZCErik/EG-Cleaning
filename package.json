@@ -1,7 +1,7 @@
 {
   "name": "eg-cleaning",
   "version": "1.0.0",
-  "description": "<<<<<<< HEAD\r # Alurapic",
+  "description": "EG Cleaning",
   "main": "karma.conf.js",
   "dependencies": {
     "@angular/animations": "^10.0.0 || ^11.0.0-0",
@@ -16,6 +16,7 @@
     "@angular/router": "^10.2.0",
     "@types/jest": "^26.0.23",
     "@types/jwt-decode": "^2.2.1",
+    "angular": "^1.8.2",
     "bootstrap": "^4.5.3",
     "core-js": "^2.5.0",
     "font-awesome": "^4.7.0",
@@ -26,7 +27,7 @@
     "zone.js": "^0.11.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^12.0.2",
+    "@angular-devkit/build-angular": "^12.1.2",
     "@angular/compiler": "^10.2.0",
     "@angular/compiler-cli": "^10.2.0",
     "@angular/core": "^10.2.0",
@@ -34,10 +35,10 @@
     "webpack-cli": "^4.7.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "ts-node-dev --respawn src/Union.ts",
-    "serve": "ts-node-dev src/function.ts",
-    "build": "tsc"
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test"
   },
   "repository": {
     "type": "git",
