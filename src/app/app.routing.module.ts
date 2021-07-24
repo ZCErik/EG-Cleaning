@@ -24,7 +24,7 @@ const routes: Routes = [
     },
     {
         path: 'home',
-        loadChildren: './home/home.module#HomeModule'
+        loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
     },
     { 
         path: 'user/:userName', 
@@ -66,7 +66,7 @@ const routes: Routes = [
 
 @NgModule({
     imports: [ 
-        RouterModule.forRoot(routes) 
+        RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }) 
     ],
     exports: [ RouterModule ]
 })
