@@ -1,0 +1,73 @@
+body {
+
+
+}
+
+.egColor {
+  background-color: #f2f2e6;
+}
+
+.textHeader {
+  color: #ffcf6b;
+}
+
+.EG {
+
+}
+
+.ourHistoryBox {
+  height: 80%;
+  width: 30%;
+  margin-right: 8%;  
+}
+
+myContainer {
+  
+}
+
+.aboutUsBackgroundImage{
+  /*background-color: red;*/
+  background-image: url('');
+  position: relative;
+  background-image: url(https://egcleaningservices.ca/wp-content/uploads/2018/05/desert_background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+}
+
+aboutBackground {
+    position: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.companiesText {
+  font-size: 4em;
+}
+
+.myContainer {
+
+}
+
+.carouselImage {
+  width: 150px;
+  height: 300px;
+}
+
+.myFooter {
+  height: 100px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+.registerBg {
+  color: #1f7eb6;
+  padding: 5px;
+}
+
+#navbarSupportedContent1 {
+  margin-right: 2px;
+}
