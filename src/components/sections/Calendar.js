@@ -28,25 +28,25 @@ const Booking = ({
   ...props
 }) => {
 
-  const outerClasses = classNames(
-    'testimonial section',
-    topOuterDivider && 'has-top-divider',
-    bottomOuterDivider && 'has-bottom-divider',
-    hasBgColor && 'has-bg-color',
-    invertColor && 'invert-color',
-    className
-  );
+  // const outerClasses = classNames(
+  //   'testimonial section',
+  //   topOuterDivider && 'has-top-divider',
+  //   bottomOuterDivider && 'has-bottom-divider',
+  //   hasBgColor && 'has-bg-color',
+  //   invertColor && 'invert-color',
+  //   className
+  // );
 
-  const innerClasses = classNames(
-    'testimonial-inner section-inner',
-    topDivider && 'has-top-divider',
-    bottomDivider && 'has-bottom-divider'
-  );
+  // const innerClasses = classNames(
+  //   'testimonial-inner section-inner',
+  //   topDivider && 'has-top-divider',
+  //   bottomDivider && 'has-bottom-divider'
+  // );
 
-  const tilesClasses = classNames(
-    'tiles-wrap',
-    pushLeft && 'push-left'
-  );
+  // const tilesClasses = classNames(
+  //   'tiles-wrap',
+  //   pushLeft && 'push-left'
+  // );
 
   const Calendar = () => {
     const [startDate, setStartDate] = useState(new Date());
@@ -67,7 +67,7 @@ const Booking = ({
     >
       <div className="container">
         <SectionHeader data={sectionHeader} className="center-content" />
-        <div className="tiles-item-inner" className="back">
+        <div className="tiles-item-inner back">
             Select Start Date: <Calendar/>
             Select End Date: <Calendar/>
         </div>

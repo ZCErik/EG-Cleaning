@@ -29,15 +29,15 @@ const Booking = ({
 
   const [videoModalActive, setVideomodalactive] = useState(false);
 
-  const openModal = (e) => {
-    e.preventDefault();
-    setVideomodalactive(true);
-  }
+  // const openModal = (e) => {
+  //   e.preventDefault();
+  //   setVideomodalactive(true);
+  // }
 
-  const closeModal = (e) => {
-    e.preventDefault();
-    setVideomodalactive(false);
-  }   
+  // const closeModal = (e) => {
+  //   e.preventDefault();
+  //   setVideomodalactive(false);
+  // }   
 
   const outerClasses = classNames(
     'hero section center-content',
@@ -48,11 +48,11 @@ const Booking = ({
     className
   );
 
-  const innerClasses = classNames(
-    'hero-inner section-inner',
-    topDivider && 'has-top-divider',
-    bottomDivider && 'has-bottom-divider'
-  );
+  // const innerClasses = classNames(
+  //   'hero-inner section-inner',
+  //   topDivider && 'has-top-divider',
+  //   bottomDivider && 'has-bottom-divider'
+  // );
 
   return (
     <section
