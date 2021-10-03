@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import { SectionProps } from '../utils/SectionProps';
-import GoogleLogin from 'react-google-login';
+// import GoogleLogin from 'react-google-login';
 // import Input from '../components/Input';
 // import ButtonGroup from '../components/elements/ButtonGroup';
 // import Button from '../components/elements/Button';
@@ -53,30 +53,30 @@ const Sigin = ({
         bottomDivider && 'has-bottom-divider'
     );
 
-    const handleLogin = async googleData => {  
-        const res = await fetch("/api/v1/auth/google", {
-        method: "POST",
-        body: JSON.stringify({
-        token: googleData.tokenId
-      }),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    });
-    const data = await res.json();
-    console.log(data);
+    // // const handleLogin = async googleData => {  
+    // //     const res = await fetch("/api/v1/auth/google", {
+    // //     method: "POST",
+    // //     body: JSON.stringify({
+    // //     token: googleData.tokenId
+    // //   }),
+    // //   headers: {
+    // //     "Content-Type": "application/json"
+    // //   }
+    // // });
+    // const data = await res.json();
+    // console.log(data);
     // store returned user somehow
-    return data;
-  }
-  const subscribe = (email) => {
-    console.log("Working", email);
-    alert("Thanks for subrscribing! You will receive an email shortly");
-  }
-  const _handleKeyDown = (e) => {
-    if (e.key === 'Enter') {
-      return subscribe(e.target.value);
-    }
-  }
+    // return data;
+  // }
+  // const subscribe = (email) => {
+  //   console.log("Working", email);
+  //   alert("Thanks for subrscribing! You will receive an email shortly");
+  // }
+  // const _handleKeyDown = (e) => {
+  //   if (e.key === 'Enter') {
+  //     return subscribe(e.target.value);
+  //   }
+  // }
 
     return (
         <section
