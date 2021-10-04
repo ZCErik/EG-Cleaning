@@ -3,8 +3,8 @@ import { useLocation, Switch } from 'react-router-dom';
 import AppRoute from './utils/AppRoute';
 import ScrollReveal from './utils/ScrollReveal';
 import ReactGA from 'react-ga';
-import { ReactKeycloakProvider } from '@react-keycloak/web'
-import keycloak from './keycloak'
+// import { ReactKeycloakProvider } from '@react-keycloak/web'
+// import keycloak from './keycloak'
 
 // Layouts
 import LayoutDefault from './layouts/LayoutDefault';
@@ -38,7 +38,7 @@ const App = () => {
   }, [location]);
 
   return (
-    <ReactKeycloakProvider authClient={keycloak}>
+    // <ReactKeycloakProvider authClient={keycloak}>
       <ScrollReveal
         ref={childRef}
         children={() => (
@@ -50,7 +50,7 @@ const App = () => {
             <AppRoute exact path="/booking" component={Booking} layout={LayoutDefault} />
           </Switch>
         )} />
-    </ReactKeycloakProvider>
+    // {/* </ReactKeycloakProvider> */}
   );
 }
 
