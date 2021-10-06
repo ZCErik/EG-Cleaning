@@ -88,10 +88,11 @@ const Hero = ({
             >
               <Image
                 className="has-shadow"
-                src={('./../../assets/images/video-placeholder.jpg')}
-                alt="Hero"
+                src={require('./../../assets/images/video-placeholder.jpg').default}
                 width={896}
-                height={504} />
+                height={504}
+                alt="Hero"
+                 />
             </a>
           </div>
           <Modal
