@@ -51,7 +51,7 @@ const FeaturesSplit = ({
 
   const sectionHeader = {
     title: 'Workflow that just works',
-    paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
+    paragraph: 'Everyone sharing their true data will make the community to trust the information that is flowing around! If the information shared is not valid, those who shared should standout to be analysed by the community. We share what we expect for our future.'
   };
 
   return (
@@ -73,7 +73,7 @@ const FeaturesSplit = ({
                   Data-driven insights
                   </h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Sharing data among everyone makes us strong together! You wanna know what's avaiable? Share something to know something else. That's the key to our success. 
                   </p>
               </div>
               <div className={
@@ -93,14 +93,14 @@ const FeaturesSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-right" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  Lightning fast workflow
+                  Connecting everyone
                   </div>
                 <h3 className="mt-0 mb-12">
                   Data-driven insights
                   </h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
+                  Information is power! We all have heard about that before, but how to get it? Sharing the true you know is the key!
+                </p>
               </div>
               <div className={
                 classNames(
@@ -119,14 +119,14 @@ const FeaturesSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  Lightning fast workflow
+                  Staying connected
                   </div>
                 <h3 className="mt-0 mb-12">
                   Data-driven insights
                   </h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
+                  Do you know where your last personal information was used? We don't either, but will notify you when we find out! 
+                </p>
               </div>
               <div className={
                 classNames(

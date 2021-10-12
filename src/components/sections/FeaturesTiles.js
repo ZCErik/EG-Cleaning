@@ -74,8 +74,8 @@ const FeaturesTiles = ({
                     Cleaning Services
                     </h4>
                   <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                    You do or need services, cleaning for example? Share that with us and all opportunities avaiable will be shared back to you!
+                  </p>
                 </div>
               </div>
             </div>
@@ -96,8 +96,8 @@ const FeaturesTiles = ({
                     Real States
                     </h4>
                   <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                    Selling or a buying a new place? Getting the most information about it and its location is one of the most important things to know!
+                  </p>
                 </div>
               </div>
             </div>
@@ -118,8 +118,8 @@ const FeaturesTiles = ({
                     Pick up Services
                     </h4>
                   <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                    Something needed to be delivered or picked up urgently? Confidentialy it's the key and the we value it! Trade with the truthful people around you and follow the best lead.
+                  </p>
                 </div>
               </div>
             </div>
@@ -138,10 +138,10 @@ const FeaturesTiles = ({
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
                     Edibles
-                    </h4>
+                  </h4>
                   <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                    Don't trust where your food is coming from? Have you shared with us before? Because we will tell you all the information the community knows about that goodie!
+                  </p>
                 </div>
               </div>
             </div>
@@ -160,10 +160,10 @@ const FeaturesTiles = ({
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
                     Basic Financial Plan
-                    </h4>
+                  </h4>
                   <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                    Our parents did know much about how the savings should properly work. However, your neighbour might know it, why not sharing with him something he doesn't know yet?
+                  </p>
                 </div>
               </div>
             </div>
@@ -184,8 +184,8 @@ const FeaturesTiles = ({
                     Content Creator
                     </h4>
                   <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                    You have created something knew and wanna share with the world? Get a Non-Fugible Token (NFT) approved by the community and notify the world its true origin.
+                  </p>
                 </div>
               </div>
             </div>
