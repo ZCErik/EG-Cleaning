@@ -1,72 +1,60 @@
-import React , {Component} from 'react';
-import PropTypes from 'prop-types';
-import '../App.css';
-import {Motion, spring} from 'react-motion';
-import Input from './Input';
-import SubmitButton from './SubmitButton';
+import React from 'react';
+// import PropTypes from 'prop-types';
 
-class SignExpanded extends Component {
+// import { SectionSplitProps } from '../../utils/SectionProps';
+import classNames from 'classnames';
 
-	constructor(props) {
-		super(props);
-		this.state = {
-			flexState: false,
-			animIsFinished: false
-		};
-	}
-
-	componentDidMount () {
-     	this.setState({flexState: !this.state.flexState});  
-  	}
+// const propTypes = {
+// 	...SectionSplitProps.types
+// }
+  
+// const defaultProps = {
+// ...SectionSplitProps.defaults
+// }
 
 
-	isFinished = () => {
-		this.setState({animIsFinished: true});
-	}
-
-	render () {
-		return (
-			<Motion style={{
-				flexVal: spring(this.state.flexState ? 8 : 1)
-			}} onRest={this.isFinished}>
-			{({flexVal}) =>
-			<div className={this.props.type==='signIn' ? 'signInExpanded' : 'signUpExpanded'} style={{
-				flexGrow: `${flexVal}`
-			}}>
-				<Motion style={{ 
-					opacity: spring(this.state.flexState ? 1 : 0,{stiffness: 300, damping: 17}),
-					y: spring(this.state.flexState ? 0 : 50, {stiffness: 100, damping: 17})
-				 }} >
-						{({opacity, y}) =>
-						<form className='logForm' style={{
-							WebkitTransform: `translate3d(0, ${y}px, 0)`,
-							transform: `translate3d(0, ${y}px, 0)`,
-							opacity: `${opacity}`
-						}}>
-							<h2>{this.props.type === 'signIn' ? 'SIGN IN' : 'SIGN UP'}</h2>
-							<Input
-								id="login"
-								type="text"
-								placeholder="LOGIN" />
-							<Input
-								id="password"
-								type="password"
-								placeholder="PASSWORD" />
-							<SubmitButton type={this.props.type}></SubmitButton>
-							<a href="url" className='forgotPass'>{this.props.type === 'signIn' ? 'Forgot password?' : ''}</a>
-						</form>
-						}
-				</Motion>
+const SignExpanded = ({
+	className,
+	topOuterDivider,
+	bottomOuterDivider,
+	topDivider,
+	bottomDivider,
+	hasBgColor,
+	invertColor,
+	...props
+	
+	
+}) => {
+	const outerClasses = classNames(
+		'hero section center-content',
+		topOuterDivider && 'has-top-divider',
+		bottomOuterDivider && 'has-bottom-divider',
+		hasBgColor && 'has-bg-color',
+		invertColor && 'invert-color',
+		className
+	);
+	const innerClasses = classNames(
+	'hero-inner section-inner',
+	topDivider && 'has-top-divider',
+	bottomDivider && 'has-bottom-divider'
+	);
+	
+	return (
+		<section
+			{...props}
+			className={outerClasses}
+		>
+			<div className="container-sm">
+				<div className={innerClasses}>
+					<div>
+            			<h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
+							<span>Welcome back. We exist to make entrepreneurship easier.</span>
+						</h1>
+					</div>
+				</div>
 			</div>
-		}
-			</Motion>
-		);
-	}
-
+		</section>
+	)
 }
-
-SignExpanded.propTypes ={
-	type: PropTypes.string	
-};
 
 export default SignExpanded;
